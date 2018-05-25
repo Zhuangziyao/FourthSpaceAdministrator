@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.fourth.dao.MissionAllDAO">
+    <select id="findAll" resultType="missionAll">
+        select mission_id as id,mission_name as name,description,reward
+        from mission_all
+    </select>
+    
+    <select id="findLikeId" resultType="missionAll">
+        select mission_id as id,mission_name as name,description,reward
+        from mission_all
+        where mission_id like concat('%',#{mission_id},'%')
+    </select>
+    
+    <delete id="deleteById">
+        delete from mission_all where mission_id=#{mission_id}
+    </delete>
+    
+    <update id="updateById" parameterType="missionAll">
+        update mission_all
+        <trim prefix="set" suffixOverrides=",">
+            <if test="name!=null and name!=''">mission_name=#{name},</if>
+            <if test="description!=null and description!=''">description=#{description},</if>
+            <if test="reward!=null and reward!=''">reward=#{reward},</if>
+        </trim>
+        where mission_id=#{id}
+    </update>
+    
+    <insert id="insertMission" keyProperty="id" parameterType="missionAll">
+        insert into mission_all(mission_id,mission_name,description,reward)
+        values(#{id},#{name},#{description},#{reward})
+    </insert>
+    
+    <delete id="deleteBatchById">
+        delete from mission_all where mission_id in
+        <foreach item="item" collection="array" open="(" separator="," close=")">
+            #{item}
+        </foreach>
+    </delete>
+</mapper>

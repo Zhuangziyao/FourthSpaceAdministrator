@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.fourth.dao.GoodDAO">
+    <select id="findAll" resultType="good">
+        select good_id as id,good_name as name,price,tags,supplier,server,
+        contact_way as contactWay,back_deadline as backDeadLine,ground_date as groundDate
+        from good
+    </select>
+    
+    <select id="findByName" resultType="good">
+        select good_id as id,information,good_name as name,supplier,server,contact_way as contactWay,price,back_deadline as backDeadLine,tags
+        from good
+        where good_name=#{good_name}
+    </select>
+    
+    <update id="updateGoodByName" parameterType="good">
+        update good
+        <trim prefix="set" suffixOverrides=",">
+            <if test="name!=null and name!=''">good_name=#{name},</if>
+            <if test="information!=null and information!=''">information=#{information},</if>
+            <if test="supplier!=null and supplier!=''">supplier=#{supplier},</if>
+            <if test="server!=null and server!=''">server=#{server},</if>
+            <if test="price!=null and price!=''">price=#{price},</if>
+            <if test="tags!=null and tags!=''">tags=#{tags},</if>
+            <if test="backDeadLine!=null and backDeadLine!=''">back_deadline=#{backDeadLine},</if>
+            <if test="contactWay!=null and contactWay!=''">contact_way=#{contactWay},</if>
+        </trim>
+        where good_id=#{id}
+    </update>
+    
+    <delete id="deleteGoodByName">
+        delete from good where good_name=#{good_name}
+    </delete>
+    
+    <insert id="insertGood" keyProperty="id" parameterType="good">
+        insert into good(good_id,good_name,information,tags,price,supplier,server,ground_date,contact_way,back_deadline)
+        values(#{id},#{name},#{information},#{tags},#{price},#{supplier},#{server},#{groundDate},#{contactWay},#{backDeadLine})
+    </insert>
+    
+    <select id="findMaxGoodId" resultType="Long">
+        select max(good_id)
+        from good
+    </select>
+    
+    <select id="findLikeName" resultType="good">
+        select good_id as id,information,good_name as name,supplier,server,ground_date as groundDate,contact_way as contactWay,price,back_deadline as backDeadLine,tags
+        from good
+        where good_name like concat('%',#{good_name},'%')
+    </select>
+    
+    <delete id="deleteBatchByName">
+        delete from good where good_name in
+        <foreach item="goodItem" collection="array" open="(" separator="," close=")">
+            #{goodItem}
+        </foreach>
+    </delete>
+</mapper>

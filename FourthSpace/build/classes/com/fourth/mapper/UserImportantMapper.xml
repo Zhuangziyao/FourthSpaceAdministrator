@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.fourth.dao.UserImportantDAO">
+    <resultMap id="userImportantMap" type="userImportant">
+        <id property="id" column="user_id"/>
+        <result property="payPassword" column="pay_pwd"/>
+        <result property="address" column="address"/>
+        <result property="money" column="money"/>
+    </resultMap>
+    
+    <select id="findAllById" parameterType="Long" resultMap="userImportantMap">
+        select user_id,pay_pwd,address,money
+        from user_important
+        where user_id=#{user_id}
+    </select>
+    
+    <delete id="deleteById">
+        delete from user_important where user_id=#{user_id}
+    </delete>
+    
+    <delete id="deleteBatchById">
+        delete from user_important where user_id in
+        <foreach item="item" collection="array" open="(" separator="," close=")">
+            #{item}
+        </foreach>
+    </delete>
+    
+    <update id="updatePayPasswordById">
+        update user_important
+        set pay_pwd='123456'
+        where user_id=#{user_id}
+    </update>
+</mapper>

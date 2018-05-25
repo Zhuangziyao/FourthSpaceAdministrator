@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.fourth.dao.AdminDAO">
+    <select id="findByIdAndPwd" resultType="java.lang.String">
+        select admin_id
+        from admin
+        where admin_id=#{admin_id} and admin_pwd=#{admin_pwd}
+    </select>
+    
+    <select id="getInfoById" resultType="admin">
+        select admin_id as adminId,name,avatar
+        from admin
+        where admin_id=#{admin_id}
+    </select>
+    
+    <update id="updateById">
+        update admin
+        <trim prefix="set" suffixOverrides=",">
+            <if test="name!=null and name!=''">admin_name=#{name}</if>
+            <if test="adminPassword!=null and adminPassword!=''">admin_pwd=#{adminPassword}</if>
+            <if test="avatar!=null and avatar!=''">avatar=#{avatar}</if>
+        </trim>
+        where admin_id=#{adminId}
+    </update>
+</mapper>

@@ -1,0 +1,445 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors Your Name (you@example.org)
+ * @date    2018-05-11 18:56:48
+ * @version $Id$
+ */
+@font-face {
+  font-family: 'iconfont';  /* project id 663219 */
+  src: url('http://at.alicdn.com/t/font_663219_o7z1lyvqgccv7vi.eot');
+  src: url('http://at.alicdn.com/t/font_663219_o7z1lyvqgccv7vi.eot?#iefix') format('embedded-opentype'),
+  url('http://at.alicdn.com/t/font_663219_o7z1lyvqgccv7vi.woff') format('woff'),
+  url('http://at.alicdn.com/t/font_663219_o7z1lyvqgccv7vi.ttf') format('truetype'),
+  url('http://at.alicdn.com/t/font_663219_o7z1lyvqgccv7vi.svg#iconfont') format('svg');
+}
+
+.iconfont{
+    font-family:"iconfont" !important;
+    font-size:16px;font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;}
+
+body{
+	margin: 0;
+	font-family: "Helvetica Neue",Helvetica, Arial, sans-serif;
+	background-color: #1a1e21;
+	font-size:14px;
+}
+ul{
+	list-style: none;
+}
+
+.dropdown-menu{
+	min-width: 100px;
+}
+
+.head{
+	height: 80px;
+	padding-top: 15px;
+	padding-bottom:15px;
+	padding-left:20px;
+	padding-right: 20px;
+}
+.head-icon{
+	height:50px;
+	float:left;
+}
+.logo{
+	height: 50px;
+}
+
+.head-user{
+	float: right;
+}
+
+.head-user-avatar{
+	width: 50px;
+	height: 50px;
+	border-radius: 32px;
+	margin-right: 30px;
+}
+
+.head-user-name{
+	float: right;
+	color: #fff;
+	font-size: 24px;
+	font-weight: 400;
+	line-height: 50px;
+}
+.content{
+	background-color: #fff;
+	height: 620px;
+	padding-top: 20px;
+}
+
+.classify{
+	padding:0;
+	margin-bottom: 30px;
+}
+
+.classify .item{
+	height: 60px;
+	border-top: 1px solid #1a1e21;
+	border-bottom: 1px solid #1a1e21; 
+	border-left: 1px solid #1a1e21;
+	text-align: center;
+	line-height: 60px;
+	font-size: 24px;
+	box-sizing: border-box;
+	cursor: pointer;
+}
+.classify #mission{
+	border-right: 1px solid #1a1e21;
+}
+
+.classify .current{
+	background-color: #1a1e21;
+	color: #fff;
+}
+
+.detail-content{
+	display: none;
+}
+
+.detail .current{
+	display: block;
+}
+
+.detail .btn-group{
+	float: left;
+}
+#btn-good{
+	height: 30px;
+	line-height: 15px;
+}
+
+.btn-operate{
+	width: 100px;
+	height: 30px;
+	margin-left: 20px; 
+	border-radius: 5px;
+	text-align: center;
+	line-height: 30px;
+	background-color: #1a1e21;
+	color: #fff;
+	font-size: 14px;
+	float: left;
+	cursor: pointer;
+}
+.search-container{
+	width: 300px;
+	height: 30px;
+	margin-left: 20px;
+	border:1px solid #1a1e21;
+	float: left;
+}
+.search-container-focus{
+	border:1px solid #aaa;
+}
+.search-icon{
+	width: 30px;
+	height: 30px;
+	margin:0 5px;
+	float: left;
+}
+.search-icon i{
+	font-size: 25px;
+	display: flex;
+	justify-content: space-around;
+	line-height: 30px;
+
+}
+.search-box{
+	width: 256px;
+	height: 28px;
+	border:none;
+	outline: medium;
+}
+.table{
+	margin-top: 30px;
+	padding: 0;
+	font-size: 15px;
+}
+.table-head{
+	height: 40px;
+	padding: 0 10px;
+	border:1px solid #1a1e21;
+	background-color: #f2f2f2;
+	line-height: 40px;
+	color: #1a1e21;
+	
+}
+.table-head div{
+	text-align: center;
+	display: inline-block;
+}
+#goods .name{
+	width: 100px;
+}
+#goods .price{
+	width: 80px;
+}
+#goods .cla{
+	width: 90px;
+}
+#goods .supplier{
+	width: 100px;
+}
+#goods .server{
+	width: 200px;
+}
+#goods .mobile{
+	width: 150px;
+}
+#goods .buyback{
+	width: 100px;
+}
+#goods .grouding{
+	width: 100px;
+}
+#goods .operate{
+	width: 160px;
+}
+
+#goods .operate a{
+	cursor: pointer;
+}
+
+.table-list{
+	padding:0;
+}
+
+.table-item{
+	height: 40px;
+	line-height: 40px;
+	border:1px solid #1a1e21;
+	border-top: 0;
+	padding: 0 10px;
+}
+
+.table-item div{
+	text-align: center;
+	display: inline-block;
+	overflow: hidden;
+}
+
+#users .account{
+	width: 100px;
+}
+
+#users .nickname{
+	width: 150px;
+}
+
+#users .star{
+	width: 80px;
+}
+
+#users .balance{
+	width: 100px;
+}
+
+#users .login-pwd{
+	width: 170px;
+}
+
+#users .pay-pwd{
+	width: 170px;
+}
+
+#users .login-time{
+	width: 100px;
+}
+
+#users .operate{
+	width: 200px;
+}
+
+#users .balance{
+	width: 100px;
+}
+
+#orders .id{
+	width: 130px;
+}
+
+#orders .number{
+	width: 150px;
+}
+
+#orders .name{
+	width: 150px;
+}
+
+#orders .account{
+	width: 	150px
+}
+
+#orders .price{
+	width: 	100px;
+}
+
+#orders .date{
+	width: 150px;
+}
+
+#orders .status{
+	width: 	100px;
+}
+
+#orders .operate{
+	width: 	150px;
+}
+
+#missions .id{
+	width: 220px;
+}
+
+#missions .name{
+	width: 220px;
+}
+
+#missions .require{
+	width: 220px;
+}
+
+#missions .reward{
+	width: 220px;
+}
+
+#missions .operate{
+	width: 220px;
+}
+
+.operate a{
+	cursor: pointer;
+}
+
+.more-info{
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	width: 362px;
+	background-color: #fff;
+	border:1px solid #1a1e21;
+	display: none;
+}
+
+
+.mission-edite{
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	width: 362px;
+	height: 300px;
+	background-color: #fff;
+	border:1px solid #1a1e21;
+	display: none;
+	box-sizing: border-box;
+}
+
+.info-head,.edite-head{
+	height: 40px;
+	background-color: #1a1e21;
+	color: #fff;
+	font-size: 20px;
+	font-weight: bold;
+	line-height: 40px;
+	padding: 0 15px;
+	margin-bottom: 10px;
+}
+
+.edite-form,.info-form{
+	padding: 0 15px;
+	font-size: 15px;
+}
+
+.info-form div,.edite-form div{
+	margin-bottom: 25px;
+}
+
+.info-form input,.info-form textarea,.edite-form input,.edite-form textarea{
+	width: 250px;
+}
+
+.info-form .intro-name,.edite-require .require-name{
+	float: left;
+}
+
+.info-server input,.info-supplier input{
+	float: right;
+}
+
+.info-kinds{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+
+.info-kinds input{
+	width: 45px;	
+}
+
+.info-kinds .btn-group{
+	margin-bottom: 0;
+}
+
+.info-kinds .btn-group button{
+	padding: 5px;
+	height: 27px;
+	line-height: 13px;
+}
+.info-form textarea,.edite-require textarea{
+	height: 50px;
+	float: right;
+	resize: none;
+}
+
+.edite-reward input{
+	width: 100px;
+}
+
+.edite-reward .visible{
+	float: right;
+}
+.edite-reward .mission-visible{
+	width:50px;
+	float:right;
+}
+.edite-btns,.info-btns{
+	display: flex;
+	justify-content: space-around;
+	
+}
+
+.info-btns input,.edite-btns input{
+	width: 120px;
+	height: 40px;
+	color: #fff;
+	background-color: #1a1e21;
+	text-align: center;
+	line-height: 40px;
+	border:0;
+	border-radius: 5px;
+	cursor: pointer;
+	margin: 0 10px;
+} 
+
+.background{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(26,30,33,0.5);
+	display: none;
+}
+
+.tail{
+	height: 80px;
+}

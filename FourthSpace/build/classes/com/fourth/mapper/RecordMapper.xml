@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.fourth.dao.RecordDAO">
+    <select id="findAll" resultType="shoppingRecord">
+        select shopping_record.id,shopping_record.good_id as goodId,user_id as userId,status,
+        buy_date as buyDate,return_date as returnDate,good_name as goodName,price
+        from shopping_record join good on shopping_record.good_id=good.good_id
+    </select>
+    
+    <select id="findLikeId" resultType="shoppingRecord">
+        select shopping_record.id,shopping_record.good_id as goodId,user_id as userId,status,
+        buy_date as buyDate,return_date as returnDate,good_name as goodName,price
+        from shopping_record join good on shopping_record.good_id=good.good_id
+        where shopping_record.id like concat('%',#{orderId},'%')
+    </select>
+    
+    <select id="findById" resultType="ShoppingRecord">
+        select id,good_id,user_id,status
+        from shopping_record
+        where id=#{id}
+    </select>
+    
+    <update id="updateById" parameterType="shoppingRecord">
+        update shopping_record
+        <trim prefix="set" suffixOverrides=",">
+            <if test="goodId!=null and goodId!=''">good_id=#{goodId},</if>
+            <if test="userId!=null and userId!=''">user_id=#{userId},</if>
+            <if test="status!=null and status!=''">status=#{status},</if>
+            <if test="buyDate!=null">buy_date=#{buyDate},</if>
+            <if test="returnDate!=null">return_date=#{returnDate},</if>
+            <if test="address!=null and address!=''">address=#{address},</if>
+        </trim>
+        where id=#{id}
+    </update>
+    
+</mapper>
