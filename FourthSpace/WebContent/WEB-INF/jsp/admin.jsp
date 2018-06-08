@@ -51,31 +51,33 @@
 						</div>
 					</div>
 					
-					<div class="table col-md-12" id="goods">
-						<div class="table-head">
-							<div class="name">商品名称</div>
-							<div class="price">价格</div>
-							<div class="cla">分类</div>
-							<div class="supplier">供应商</div>
-							<div class="server">服务商</div>
-							<div class="mobile">联系方式</div>
-							<div class="buyback">退购期限</div>
-							<div class="grouding">上架日期</div>
-							<div class="operate">操作</div>
-						</div>
-						<ul class="table-list">
-							<li class="table-item">
-								<div class="name">LNMP环境</div>
-								<div class="price">1000000000000</div>
-								<div class="cla">技术</div>
-								<div class="supplier">第四空间</div>
-								<div class="server">上海微柳网络科技有限公司</div>
-								<div class="mobile">4008005185转1036</div>
-								<div class="buyback">30天</div>
-								<div class="grouding">2018/5/10</div>
-								<div class="operate"><a class="delete">删除</a>/<a class="more">详细信息</a></div>
-							</li>
-						</ul>
+					<div class="col-md-12" id="goods">
+						<table class="table table-bordered table-striped">
+							<thead class="table-head">
+								<td class="name">商品名称</td>
+								<td class="price">价格</td>
+								<td class="cla">分类</td>
+								<td class="supplier">供应商</td>
+								<td class="server">服务商</td>
+								<td class="mobile">联系方式</td>
+								<td class="buyback">退购期限</td>
+								<td class="grouding">上架日期</td>
+								<td class="operate">操作</td>
+							</thead>
+						<tbody class="table-list">
+							<tr class="table-item">
+								<td class="name">LNMP环境</td>
+								<td class="price">1000000000000</td>
+								<td class="cla">技术</td>
+								<td class="supplier">第四空间</td>
+								<td class="server">上海微柳网络科技有限公司</td>
+								<td class="mobile">4008005185转1036</td>
+								<td class="buyback">30天</td>
+								<td class="grouding">2018/5/10</td>
+								<td class="operate"><a class="delete">删除</a>/<a class="more">详细信息</a></td>
+							</tr>
+						</tbody>
+						</table>
 					</div>
 				</div>
 				<div class="detail-content">
@@ -91,29 +93,32 @@
 						</div>
 					</div>
 
-					<div class="table col-md-12" id="users">
-						<div class="table-head">
-							<div class="account">用户账号</div>
-							<div class="nickname">账号昵称</div>
-							<div class="star">星级</div>
-							<div class="balance">账户余额</div>
-							<div class="login-pwd">登录密码（已加密）</div>
-							<div class="pay-pwd">支付密码（已加密）</div>
-							<div class="login-time">上次登录时间</div>
-							<div class="operate">操作</div>
-						</div>
-						<ul class="table-list">
-							<li class="table-item">
-								<div class="account">17705840828</div>
-								<div class="nickname">大猪妖</div>
-								<div class="star">31</div>
-								<div class="balance">100000</div>
-								<div class="login-pwd">*&￥%#@</div>
-								<div class="pay-pwd">asfeds</div>
-								<div class="login-time">2018/5/10</div>
-								<div class="operate"><a class="delete">删除</a> / <a class="reset">重置密码</a></div>
-							</li>
-						</ul>
+					<div class="col-md-12" id="users">
+						<table class="table table-bordered table-striped">
+							<thead class="table-head">
+							<td class="account">用户账号</td>
+							<td class="nickname">账号昵称</td>
+							<td class="star">星级</td>
+							<td class="balance">账户余额</td>
+							<td class="login-pwd">登录密码（已加密）</td>
+							<td class="pay-pwd">支付密码（已加密）</td>
+							<td class="login-time">上次登录时间</td>
+							<td class="operate">操作</td>
+						</thead>
+						<tbody class="table-list">
+							<tr class="table-item">
+								<td class="account">17705840828</td>
+								<td class="nickname">大猪妖</td>
+								<td class="star">31</td>
+								<td class="balance">100000</td>
+								<td class="login-pwd">*&￥%#@</td>
+								<td class="pay-pwd">asfeds</td>
+								<td class="login-time">2018/5/10</td>
+								<td class="operate"><a class="delete">删除</a> / <a class="reset">重置密码</a></td>
+							</tr>
+						</tbody>
+						</table>
+						
 					</div>
 				</div>
 				<div class="detail-content">
@@ -126,34 +131,36 @@
 							<input type="text" placeholder="订单号" class="search-box">
 						</div>
 					</div>
-					<div class="table col-md-12" id="orders">
-						<div class="table-head">
-							<div class="id">订单号</div>
-							<div class="number">商品编号</div>
-							<div class="name">商品名称</div>
-							<div class="account">用户账号</div>
-							<div class="price">交易金额</div>
-							<div class="date">订单时间</div>
-							<div class="status">订单状态</div>
-							<div class="operate">操作</div>
-						</div>
-						<ul class="table-list">
-							<li class="table-item">
-								<div class="id">415642576879</div>
-								<div class="number">a111</div>
-								<div class="name">LNMP环境</div>
-								<div class="account">17705840828</div>
-								<div class="price">18900</div>
-								<div class="date">2018/5/10 14:30</div>
-								<div class="status">已签收</div>
-								<div class="operate"><a class="buy-back">处理退购</a></div>
-							</li>
-						</ul>
+					<div class="col-md-12" id="orders">
+						<table class="table table-bordered table-striped">
+							<thead class="table-head">
+							<td class="id">订单号</td>
+							<td class="number">商品编号</td>
+							<td class="name">商品名称</td>
+							<td class="account">用户账号</td>
+							<td class="price">交易金额</td>
+							<td class="date">订单时间</td>
+							<td class="status">订单状态</td>
+							<td class="operate">操作</td>
+						</thead>
+						<tbody class="table-list">
+							<tr class="table-item">
+								<td class="id">415642576879</td>
+								<td class="number">a111</td>
+								<td class="name">LNMP环境</td>
+								<td class="account">17705840828</td>
+								<td class="price">18900</td>
+								<td class="date">2018/5/10 14:30</td>
+								<td class="status">已签收</td>
+								<td class="operate"><a class="buy-back">处理退购</a></td>
+							</tr>
+						</tbody>
+						</table>
+						
 					</div>
 				</div>
 				<div class="detail-content">
-					<div class="navgation" id="mission">
-						
+					<div class="navgation" id="mission">					
 						<div class="btn-operate">新建</div>
 						<div class="btn-operate">选择</div>
 						<div class="btn-operate">删除</div>
@@ -164,25 +171,28 @@
 							<input type="text" placeholder="任务编号" class="search-box">
 						</div>
 					</div>
-					<div class="table col-md-12" id="missions">
-						<div class="table-head">
-							<div class="id">任务编号</div>
-							<div class="name">任务名称</div>
-							<div class="require">任务要求</div>
-							<div class="reward">奖励金额</div>
-							<div class="operate">操作</div>
-						</div>
-						<ul class="table-list">
-							<li class="table-item">
-								<div class="id">415642576879</div>
-								<div class="name">登录</div>
-								<div class="require">账号登录</div>
-								<div class="reward">1000</div>
-								<div class="operate">
+					<div class="col-md-12" id="missions">
+						<table class="table table-bordered table-striped">
+							<thead class="table-head">
+							<td class="id">任务编号</td>
+							<td class="name">任务名称</td>
+							<td class="require">任务要求</td>
+							<td class="reward">奖励金额</td>
+							<td class="operate">操作</td>
+						</thead>
+						<tbody class="table-list">
+							<tr class="table-item">
+								<td class="id">415642576879</td>
+								<td class="name">登录</td>
+								<td class="require">账号登录</td>
+								<td class="reward">1000</td>
+								<td class="operate">
 									<a class="delete">删除</a>/<a class="edite">编辑</a>
-								</div>
-							</li>
-						</ul>
+								</td>
+							</tr>
+						</tbody>
+						</table>
+						
 					</div>
 				</div>
 			</div>

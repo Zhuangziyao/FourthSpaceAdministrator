@@ -76,10 +76,10 @@ function getGoods(){
 		success:function(data){
 			$('#goods .table-list').children().remove();
 			for(var i=0;i<data.length;i++){
-				var line="<li class='table-item'><div class='name'>"+data[i].name+"</div><div class='price'>"+data[i].price+"</div><div class='cla'>"+data[i].tags+"</div>" +
-						"<div class='supplier'>"+data[i].supplier+"</div><div class='server'>"+data[i].server+"</div><div class='mobile'>"+data[i].contactWay+"</div>" +
-						"<div class='buyback'>"+data[i].backDeadLine+"</div><div class='grouding'>"+getDate(data[i].groundDate)+"</div>" +
-						"<div class='operate'><a class='delete'>删除</a>/<a class='more'>详细信息</a></div></li>";
+				var line="<tr class='table-item'><td class='name'>"+data[i].name+"</td><td class='price'>"+data[i].price+"</td><td class='cla'>"+data[i].tags+"</td>" +
+						"<td class='supplier'>"+data[i].supplier+"</td><td class='server'>"+data[i].server+"</td><td class='mobile'>"+data[i].contactWay+"</td>" +
+						"<td class='buyback'>"+data[i].backDeadLine+"</td><td class='grouding'>"+getDate(data[i].groundDate)+"</td>" +
+						"<td class='operate'><a class='delete'>删除</a>/<a class='more'>详细信息</a></td></tr>";
 				$('#goods .table-list').append(line);
 			}	
 		},
@@ -98,11 +98,11 @@ function getUsers(){
 		success:function(data){
 			$('#users .table-list').children().remove();
 			for(var i=0;i<data.length;i++){
-				var line="<li class='table-item'><div class='account'>"+data[i].id+"</div>" +
-						"<div class='nickname'>"+data[i].nickname+"</div><div class='star'>"+data[i].star+"</div>" +
-						"<div class='balance'>"+data[i].userImportant.money+"</div><div class='login-pwd'>"+data[i].password+"</div>" +
-						"<div class='pay-pwd'>"+data[i].userImportant.payPassword+"</div><div class='login-time'>"+data[i].lastLogin+"</div>" +
-						"<div class='operate'><a class='delete'>删除</a> / <a class='reset'>重置密码</a></div></li>";
+				var line="<tr class='table-item'><td class='account'>"+data[i].id+"</td>" +
+						"<td class='nickname'>"+data[i].nickname+"</td><td class='star'>"+data[i].star+"</td>" +
+						"<td class='balance'>"+data[i].userImportant.money+"</td><td class='login-pwd'>"+data[i].password+"</td>" +
+						"<td class='pay-pwd'>"+data[i].userImportant.payPassword+"</td><td class='login-time'>"+data[i].lastLogin+"</td>" +
+						"<td class='operate'><a class='delete'>删除</a> / <a class='reset'>重置密码</a></td></tr>";
 				$('#users .table-list').append(line);
 			}
 		}
@@ -118,10 +118,10 @@ function getOrders(){
 		success:function(data){
 			$('#orders .table-list').children().remove();
 			for(var i=0;i<data.length;i++){
-				var line="<li class='table-item'><div class='id'>"+data[i].id+"</div><div class='number'>"+data[i].goodId+"</div>" +
-						"<div class='name'>"+data[i].goodName+"</div><div class='account'>"+data[i].userId+"</div>" +
-						"<div class='price'>"+data[i].price+"</div><div class='date'>"+data[i].buyDate+"</div>" +
-						"<div class='status'>"+data[i].status+"</div><div class='operate'><a class='buy-back'>处理退购</a></div></li>";
+				var line="<tr class='table-item'><td class='id'>"+data[i].id+"</td><td class='number'>"+data[i].goodId+"</td>" +
+						"<td class='name'>"+data[i].goodName+"</td><td class='account'>"+data[i].userId+"</td>" +
+						"<td class='price'>"+data[i].price+"</td><td class='date'>"+data[i].buyDate+"</td>" +
+						"<td class='status'>"+data[i].status+"</td><td class='operate'><a class='buy-back'>处理退购</a></td></tr>";
 				$('#orders .table-list').append(line);
 			}
 		}
@@ -137,10 +137,10 @@ function getMissions(){
 		success:function(data){
 			$('#missions .table-list').children().remove();
 			for(var i=0;i<data.length;i++){
-				var line="<li class='table-item'><div class='id'>"+data[i].id+"</div>" +
-						"<div class='name'>"+data[i].name+"</div><div class='require'>"+data[i].description+"</div>" +
-						"<div class='reward'>"+data[i].reward+"</div>" +
-						"<div class='operate'><a class='delete'>删除</a>/<a class='edite'>编辑</a></div></li>";
+				var line="<tr class='table-item'><td class='id'>"+data[i].id+"</td>" +
+						"<td class='name'>"+data[i].name+"</td><td class='require'>"+data[i].description+"</td>" +
+						"<td class='reward'>"+data[i].reward+"</td>" +
+						"<td class='operate'><a class='delete'>删除</a>/<a class='edite'>编辑</a></div></tr>";
 				$('#missions .table-list').append(line);
 			}
 		}
@@ -364,7 +364,7 @@ $('#user .btn-operate').click(function(event){
 	}
 })
 //新建删除任务
-$('#mission .btn_operate').click(function(event){
+$('#mission .btn-operate').click(function(event){
 	if($(this).index()==0){
 		$('.edite-form .mission-name').val();
 		$('.edite-form .mission-desc').val();
